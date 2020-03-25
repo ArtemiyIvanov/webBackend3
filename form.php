@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title> Задание 3 </title>
@@ -7,17 +5,16 @@
   </head>
   <body>
   	<div class="formphp">
-	<form action="handler.php" method="post"> 
+	<form action="" method="post"> 
             <h2> Форма </h2> 
             <p><label>
               Введите имя:<br>
-              <input type="text" placeholder="Введите ваше имя" required>
+              <input type="text" name="fio" placeholder="Введите ваше имя">
             </label><br></p>
     
             <label> 
               <a class="uptext">Введите ваш email:</a> <br>
-              <input name="field-email"
-              placeholder="test@example.com"
+              <input name="email"
               type="email" /> 
             </label><br>
             <p><label>
@@ -54,20 +51,17 @@
               <label>
                 <input type="radio" value="4" name="Limbs">4
               </label>
-              <label>
-                <input type="radio" value=">4" name="Limbs"> >4
-              </label>
               <br>
-              <p><label>
-              Сверхспособности: <br>
-              <select name="abilities[]" multiple>
-  					<?php 
- 					foreach ($ability_labels as $key => $value) {
-  					?>
-   					 <option value="<? $key; ?>"><?= $value; ?></option>
-  					<?php } ?>
-  					</select>
-  				</label></p>
+      
+             <select name="abilities[]" multiple>
+  				<?php 
+                foreach ($ability_labels as $key => $value) {
+                ?>
+    			<option value="<? $key; ?>"><?= $value; ?></option>
+  				<?php } ?>
+  				</select>
+             
+
       
            <p> <label>
               Биография:<br>
@@ -75,7 +69,7 @@
             </label></p>
       
             <p><label>
-              <input type="checkbox" name="С контрактом ознакомлен">
+              <input type="checkbox" name="acquainted" value="yes">
               С контрактом ознакомлен
             </label> </p>
       
@@ -84,4 +78,3 @@
           </form>
       </div>
       </body>
-      </html>
