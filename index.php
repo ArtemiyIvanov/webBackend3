@@ -78,8 +78,6 @@ if ($errors) {
     exit();
 }
 
-// Сохранение в базу данных.
-
 $user = 'u16680';
 $pass = '2653432';
 $db = new PDO('mysql:host=localhost;dbname=u16680', $user, $pass,
